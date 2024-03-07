@@ -1,28 +1,28 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 5.39.1"
     }
 
     tls = {
-      source = "hashicorp/tls"
+      source  = "hashicorp/tls"
       version = "~> 4.0.5"
     }
 
     cloudinit = {
-      source = "hashicorp/cloudinit"
+      source  = "hashicorp/cloudinit"
       version = "~> 2.3.3"
     }
-    
+
     kubernetes = {
-      source = "hashicorp/kubernetes"
+      source  = "hashicorp/kubernetes"
       version = "~> 2.26.0"
     }
 
   }
 
-    backend "s3" {
+  backend "s3" {
     bucket = "gitopsterraformstate"
     key    = "terraform.tfstate"
     region = "us-east-1"

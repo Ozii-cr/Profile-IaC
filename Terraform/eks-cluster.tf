@@ -9,7 +9,7 @@ module "eks" {
   subnet_ids                     = module.vpc.private_subnets
   cluster_endpoint_public_access = true
 
-# Amazon Linux 2 ami
+  # Amazon Linux 2 ami
   eks_managed_node_group_defaults = {
     ami_type = "AL2_x86_64"
 
