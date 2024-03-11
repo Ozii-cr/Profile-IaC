@@ -54,7 +54,7 @@ jobs:
 
       - name: "Terraform plan"
         id: plan
-        run: terrafrom plan -no-color -input=false -out planfile
+        run: terraform plan -no-color -input=false -out planfile
         continue-on-error: true
       
       - name: "Terraform plan status"
